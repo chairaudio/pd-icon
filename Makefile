@@ -96,7 +96,8 @@ $(XPM): $(SRC_PNG)
 # generate pngs from SVG directly using inkscape
 inkscape:
 	for _res in 16 32 48 64 96 128 256 512 ; do \
-		 inkscape --export-type="png" --export-filename=pd-$${_res}.png --export-width $${_res} --export-height $${_res} $(SRC_SVG) ; \
+		inkscape --export-type="png" --export-filename=pd-$${_res}.png \
+		         --export-width $${_res} --export-height $${_res} $(SRC_SVG) ; \
 	done
 
 # register icon for Pd mimetype (adapted from https://stackoverflow.com/a/31836/1964109 )
